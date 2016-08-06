@@ -1,0 +1,27 @@
+<div ng-if="publicaciones">
+    <h3>Publicaciones de la Fundacion</h3>
+    <div class="wrapper wrapper-content container animated fadeInRight blog">
+        <div class="row">
+            <div class="col-lg-4" ng-repeat="pub in publicaciones">
+                <div class="ibox">
+                    <div class="ibox-content fh-200" truncate truncate-options="truncateOptions">
+                        <a ng-click="verArticulo(pub.id)" class="btn-link">
+                            <h2>
+                                {{pub.titulo}}
+                            </h2>
+                        </a>
+                        <div class="small m-b-xs">
+                            <strong>{{pub.autor}}</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> {{pub.fecha}}</span>
+                        </div>
+                        <p ng-bind-html="pub.contenido"></p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button ng-click="verArticulo(pub.id)" class="btn btn-primary btn-xs" type="button">Leer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

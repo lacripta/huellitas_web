@@ -1,0 +1,36 @@
+<!-- Wrapper-->
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="fapa.inicio"><img src="img/logo.png" alt="laptop" width="70"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ui-sref-active="active"><a ui-sref="fapa.inicio" data-target="#">Inicio</a></li>
+                    <li ui-sref-active="active"><a ui-sref="fapa.nosotros" data-target="#">Nosotros</a></li>
+                    <li ui-sref-active="active"><a ui-sref="fapa.servicios" data-target="#">Servicios</a></li>
+                    <li ui-sref-active="active"><a ui-sref="fapa.adopciones" data-target="#">Adopciones</a></li>
+                    <li ui-sref-active="active"><a ui-sref="fapa.tienda" data-target="#">Tienda</a></li>
+                    <li ui-sref-active="active"><a ui-sref="fapa.blog" data-target="#">Publicaciones</a></li>
+                    <li ui-sref-active="active"><a ui-sref="fapa.contacto" data-target="#">Contactenos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="gray-bg {{$state.current.name}}">
+    <div class="space-70"></div>
+    <!-- Page wrapper -->
+    <div ng-include="'views/common/galeria.html'"></div>
+    <!-- Main view  -->
+    <div ui-view></div>
+    <!-- Footer -->
+    <div ng-include="'views/common/footer.html'"></div>
+</div>

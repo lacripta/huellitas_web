@@ -1,0 +1,18 @@
+<div id="inSlider" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li ng-repeat="item in galeria track by $index" data-target="inSlider" data-slide-to="{{$index}}"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item" ng-class="{active: $index == 0}" ng-repeat="item in galeria track by $index">
+            <img ng-src="{{item.url}}" class="full-width" alt="{{item.descripcion}}">
+        </div>
+    </div>
+    <a class="left carousel-control" data-target="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" data-target="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>

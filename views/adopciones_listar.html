@@ -1,0 +1,26 @@
+<div class="wrapper wrapper-content container animated fadeInRight" ng-if="adopciones">
+    <div class="row">
+        <div class="col-xs-4" ng-repeat="adt in adopciones">
+            <div class="ibox">
+                <div class="ibox-content product-box">
+                    <div class="product-imitation">
+                        <a ng-click="verAdopcion(adt.id)"><img ng-src="{{adt.url}}" class="img-shadow" style="height: 100%; width: 100%; object-fit: cover"></a>
+                    </div>
+                    <div class="product-desc">
+                        <span class="product-price">
+                            {{adt.sexo}}
+                        </span>
+                        <small class="text-muted">{{adt.desespecie}}/{{adt.desraza}}</small>
+                        <a ng-click="verAdopcion(adt.id)" class="product-name">{{adt.nombre}}</a>
+                        <div class="small m-t-xs">
+                            <p truncate truncate-options="truncateOptions">{{adt.descripcion}}</p>
+                        </div>
+                        <div class="m-t text-righ">
+                            <a class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

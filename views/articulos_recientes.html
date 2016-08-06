@@ -1,0 +1,45 @@
+<div class="border-top padding80">
+    <div class="container home-blog" id="5">
+        <div class="text-center space40">
+            <h2 class="title uppercase">Publicaciones Recientes</h2>
+            <p>Si deseas estar actualizado con las actividades de la fundacion o conocer ams acerca de tu mascota puedes consultar esta seccion</p>
+        </div>
+        <div class="wrapper wrapper-content  animated fadeInRight blog">
+            <div class="row">
+                <div ng-repeat="art in recientes track by $index">
+                    <div ng-if="$index < 3">
+                        <div class="col-lg-4">
+                            <div class="ibox">
+                                <div class="ibox-content" truncate truncate-options="truncateOptions" style="height: 500px">
+                                    <div class="hb-thumb">
+                                        <a ng-click="verArticulo(art.id)">
+                                            <img ng-src="{{art.imagen_url}}" class="img-responsive center-block fh-200" alt=""/>
+                                        </a>
+                                        <div class="date-meta">
+                                            {{mesesC[art.mes]}}<span>{{art.dia}}</span>{{art.anio}}
+                                        </div>
+                                    </div>
+                                    <a ng-click="verArticulo(art.id)" class="btn-link">
+                                        <h2>
+                                            {{art.titulo}}
+                                        </h2>
+                                    </a>
+                                    <div class="small m-b-xs">
+                                        <strong>{{art.autor}}</strong> <span class="text-muted"> <i class="fa fa-clock-o"></i>{{art.fecha}}</span>
+                                    </div>
+                                    <div class="">
+                                        <p>{{art.resumen}}</p>
+                                        <hr>
+                                        <p ng-bind-html="art.contenido"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

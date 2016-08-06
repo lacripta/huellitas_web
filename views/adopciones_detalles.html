@@ -1,0 +1,57 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox product-detail">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <slick dots="true" init-onload=true data="adt.imagenes">
+                                <div ng-repeat="img in adt.imagenes" style="display: inline-block;">
+                                    <img ng-src="{{img.src}}" alt="{{img.alt}}" class="img-shadow" style="vertical-align: middle; height: 100%; width: 100%; object-fit: cover">
+                                </div>
+                            </slick>
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="font-bold m-b-xs">
+                                {{adt.nombre}}
+                            </h2>
+                            <small class="text-muted">{{adt.especie}}/{{adt.raza}}</small>
+                            <div class="m-t-md">
+                                <h2 class="product-main-price">{{adt.estado}}</h2>
+                            </div>
+                            <hr>
+                            <h4>Descripción</h4>
+                            <div class="small text-muted">
+                                {{adt.descripcion}}
+                            </div>
+                            <dl class="small m-t-md">
+                                <dt>Especie</dt>
+                                <dd>{{adt.especie}}</dd>
+                                <dt>Raza</dt>
+                                <dd>{{adt.raza}}</dd>
+                                <dt>Color</dt>
+                                <dd>{{adt.color}}</dd>
+                                <dt>Edad</dt>
+                                <dd>{{adt.edad}} {{adt.edad_tipo}}</dd>
+                                <dt>Nombre</dt>
+                                <dd>{{adt.nombre}}</dd>
+                            </dl>
+                            <hr>
+                            <div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i>Solicitar adopción</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-footer">
+                    <span class="pull-right">
+                        Huellitas del Llano
+                    </span>
+                    La informacion aqui presentada debe ser verificada con la fundación
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

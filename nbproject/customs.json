@@ -1,0 +1,34 @@
+{
+    "elements": {
+        "atencion-animales": {},
+        "articulos-recientes-mini": {},
+        "patrocinadores": {},
+        "articulos-recientes": {
+            "attributes": {
+                "articulo-actual": {}
+            }
+        },
+        "adopciones-listar": {},
+        "slick": {
+            "attributes": {
+                "slides-to-show": {},
+                "infinite": {},
+                "responsive": {},
+                "slides-to-scroll": {},
+                "class": {},
+                "center-mode": {}
+            }
+        },
+        "articulos-mostrar": {}
+    },
+    "attributes": {
+        "truncate-options": {},
+        "page-scroll": {},
+        "truncate": {},
+        "page-title": {},
+        "aria-expanded": {},
+        "ui-view": {},
+        "ui-sref": {},
+        "ui-sref-active": {}
+    }
+}

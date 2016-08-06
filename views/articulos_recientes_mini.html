@@ -1,0 +1,20 @@
+<h4 class="space30">Publicaciones Recientes</h4>
+<ul class="f-posts">
+    <div ng-repeat="art in recientes">
+        <div class="feed-element">
+            <a ng-click="verArticulo(art.id)" class="pull-left">
+                <img alt="image" class="img-circle" ng-src="{{art.imagen_url}}">
+            </a>
+            <div class="media-body ">
+                <div ng-if="art.hace == 0">
+                    <small class="pull-right">Hoy</small>
+                </div>
+                <div ng-if="art.hace > 0">
+                    <small class="pull-right">{{art.hace}} d&iacute;as</small>
+                </div>
+                <a ng-click="verArticulo(art.id)"><strong>{{art.titulo}}</strong></a><br>
+                <small class="text-muted">{{art.fecha}}</small>
+            </div>
+        </div>
+    </div>
+</ul>
